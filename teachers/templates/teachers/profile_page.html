@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.82.0">
+    <title>Starter Template · Bootstrap v5.0</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/starter-template/">
+
+    
+
+    <!-- Bootstrap core CSS -->
+<link href="https://getbootstrap.com/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+  </head>
+  <body>
+    
+<div class="col-lg-8 mx-auto p-3 py-md-5">
+  <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
+    <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+      <span class="fs-4">Directory app</span>
+    </a>
+  </header>
+
+ <a href="/admin/teachers/teacher">Back to Listing</a><br><br>
+
+  <h1>{{ teacher.first_name }} {{ teacher.last_name }}</h1>
+  <p class="fs-5 col-md-8">
+    
+    {% if  teacher.profile_picture %}
+        <img src="/media/{{ teacher.profile_picture }}" width="200" />
+    {% else %}
+        <img src="/media/no-image.png" />
+    {% endif %}
+    
+    {% if  teacher.phone_number %}
+        <p>Phone number: <a href="tel:{{ teacher.phone_number }}">{{ teacher.phone_number }}</a></p>
+    {% endif %}
+    
+    {% if  teacher.room_number %}
+        <p>Room number: {{ teacher.room_number }}</p>
+    {% endif %}
+
+  </p>
+
+
+  <hr class="col-3 col-md-2 mb-5">
+
+  <div class="row g-5">
+    <div class="col-md-6">
+      <h2>Subjects</h2>
+      <ul class="icon-list">
+       {% for s in teacher.subjects.all %}
+            <li>{{ s.name }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+   </div>
+
+  </body>
+</html>
