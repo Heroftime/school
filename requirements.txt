@@ -6,8 +6,7 @@ chardet==4.0.0
 colorclass==2.2.0
 defusedxml==0.7.1
 diff-match-patch==20200713
-# Editable install with no version control (Django==3.1.6)
--e /home/noman/.virtualenvs/djangodev/lib/python3.8/site-packages
+Django==3.1.6
 django-bootstrap-v5==1.0.0
 django-filter==2.4.0
 django-import-export==2.5.0
