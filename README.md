@@ -2,7 +2,7 @@ It is a Teacher Directory app created as per techtest document.
 
 This web application is built Django, which is a Python web framework.
 
-Below are the details on how to setup this project.
+Below are the details on how to setup this project and how to use it.
 
 ## Setting up and running the application:
 
@@ -11,7 +11,7 @@ Below are the details on how to setup this project.
 python ––version
 ```
 
-### Install Python (skip this if Python is already installed
+### Install Python (skip this if Python is already installed)
 ```
 sudo apt update
 sudo apt install software-properties-common
