@@ -25,6 +25,11 @@ Check here for installation for other OSes:
 https://realpython.com/installing-python/
 
 
+### Clone the project
+```
+git clone https://github.com/Heroftime/school.git
+```
+
 ### Create the virtual environment and activate it
 ```
 python3 -m venv venv
